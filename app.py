@@ -59,5 +59,5 @@ def sdfsdfsdfsxcxcvxcxxcdfsdfsdf():
 
 @app.route('/ping')
 def sdfsdfxcvxcvxcvsddsfsdfsdffsdfsdfsdf():
-    return "ponmg"
+    return "pong"
     
