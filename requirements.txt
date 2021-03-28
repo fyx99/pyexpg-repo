@@ -1,2 +1,4 @@
-flask
+uvicorn
 psycopg2-binary
+fastapi
+starlette

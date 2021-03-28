@@ -1,0 +1,13 @@
+###
+POST http://localhost:4000/api/setting/createdb
+
+
+
+###
+POST http://localhost:8000/api/setting/createtables
+
+
+
+
+###
+POST http://167.172.164.99:4000/api/setting/createdb
