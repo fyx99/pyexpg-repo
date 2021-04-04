@@ -11,7 +11,7 @@ from databaseinterface.api import router as endpoint_router
 
 
 
-app = FastAPI(title="data-backend", version="0")
+app = FastAPI(title="data-pg-interface", version="0")
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # origins = [
@@ -34,6 +34,7 @@ app.include_router(endpoint_router, prefix="/api")
 async def on_app_start():
     """Anything that needs to be done while app starts
     """
+
     pass #await connect()
 
 
@@ -48,7 +49,10 @@ async def on_app_shutdown():
 async def ping():
     """Pings
     """
-    return Response("DATABASEINTERFACE v1")
+    import os
+
+    print(os.environ[ 'DOCKER_HELLO' ])
+    return Response(os.environ[ 'DOCKER_HELLO' ])
 
 
 

@@ -11,3 +11,42 @@ POST http://localhost:8000/api/setting/createtables
 
 ###
 POST http://167.172.164.99:4000/api/setting/createdb
+
+
+
+
+
+@HOSTNAME = 167.172.164.99:4000
+@BASEURL = http://167.172.164.99:4000
+
+
+###
+POST {{BASEURL}}/api/setting/createdb
+
+
+###
+POST {{BASEURL}}/api/setting/createtables
+
+
+
+###
+POST {{BASEURL}}/api/query/sql
+
+{ "command": "select * from ticker;" }
+
+
+###
+POST {{BASEURL}}/api/query/sql
+
+{ "command": "DELETE from ticker;" }
+
+###
+POST {{BASEURL}}/api/query/sql
+
+{ "command": "Insert into ticker values ('{{$randomInt 0 999}}', 'b');" }
+
+
+###
+GET {{BASEURL}}/ping
+
+
